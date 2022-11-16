@@ -1,0 +1,144 @@
+/* GENERAL CONFIGURATIONS */
+:root {
+  --color-dark-cyan: hsl(158, 36%, 37%);
+  --color-darker-cyan: hsl(158, 36%, 18%);
+  --color-dark-blue: hsl(212, 21%, 14%);
+  --color-dark-grayish-blue: hsl(228, 12%, 48%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-cream);
+  display: grid;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  min-height: 100vh;
+  padding: 1.5rem;
+  place-content: center;
+  row-gap: 2rem;
+}
+
+h1 {
+  color: var(--color-dark-blue);
+  font-family: 'Fraunces', serif;
+  margin-bottom: 0.8rem;
+  line-height: 1;
+}
+
+/* CARD COMPONENT */
+.card {
+  background-color: var(--color-white);
+  border-radius: 1rem;
+  display: flex;
+  max-width: 54.5rem;
+  min-width: 34.5rem;
+  width: 100%;
+  height: min-content;
+  overflow: hidden;
+}
+
+.card-image-container {
+  max-width: 50%;
+  width: 100%;
+}
+
+.card-image {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 3rem;
+  width: 100%;
+}
+
+.card-subtitle {
+  color: var(--color-dark-grayish-blue);
+  display: block;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+
+.card-description {
+  color: var(--color-dark-grayish-blue);
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+.card-pricing {
+  align-items: center;
+  display: flex;
+  gap: 2.4rem;
+  margin-bottom: auto;
+}
+
+.card-price--on {
+  color: var(--color-dark-cyan);
+  font-family: 'Fraunces', serif;
+  font-size: 2.8rem;
+}
+
+.card-price--off {
+  color: var(--color-dark-grayish-blue);
+  font-family: 'Montserrat', sans-serif;
+  justify-self: flex-start;
+  text-decoration: line-through;
+}
+
+.card-button {
+  align-items: center;
+  background: var(--color-dark-cyan);
+  border-radius: 0.8rem;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  font-weight: 700;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1.2rem 2.4rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.card-button:hover {
+  background: var(--color-darker-cyan);
+}
+
+@media screen and (max-width: 34.5em) {
+  .card {
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    max-height: 61rem;
+    max-width: 34.5rem;
+  }
+
+  .card-image-container {
+    max-width: 100%;
+    max-height: 40%;
+  }
+
+  .card-content-container {
+    gap: 1.6rem;
+  }
+
+  .card-image {
+    object-position: center 45%;
+  }
+}
