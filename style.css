@@ -120,6 +120,26 @@ h1 {
   background: var(--color-darker-cyan);
 }
 
+/* FOOTER */
+.attribution {
+  bottom: 1rem;
+  color: hsl(0, 0%, 0%);
+  font-size: 11px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(0, 0%, 0%);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 34.5em) {
   .card {
     align-items: center;

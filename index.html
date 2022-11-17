@@ -21,21 +21,14 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(0, 0%, 0%);
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <main class="card">
-      <div class="card-image-container">
-        <img class="card-image" src="images/image-product-desktop.jpg" alt="Product image" />
-      </div>
+      <picture class="card-image-container">
+        <source media="(max-width: 34.5em)" srcset="./images/image-product-mobile.jpg" />
+        <img class="card-image" src="./images/image-product-desktop.jpg" alt="Product image" />
+      </picture>
       <div class="card-content-container">
         <span class="card-subtitle">Perfume</span>
         <h1 class="card-title">Gabrielle Essence Eau De Parfum</h1>
@@ -45,7 +38,9 @@
         </p>
         <div class="card-pricing">
           <span class="card-price--on">$149.99</span>
-          <span class="card-price--off">$169.99</span>
+          <del>
+            <span class="card-price--off">$169.99</span>
+          </del>
         </div>
         <button class="card-button">
           <img src="images/icon-cart.svg" alt="Icon cart" /> Add to Cart
